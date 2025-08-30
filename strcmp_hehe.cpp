@@ -15,9 +15,6 @@ int main()
     return 0;
 }
 
-// h e l l o \0
-// h e l l o \0
-
 int my_strcmp(char a[], char b[])
 {
     int i = 0;

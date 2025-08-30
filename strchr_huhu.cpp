@@ -18,7 +18,6 @@ int main()
     scanf("%c", &b);
 
     printf("%p\n", my_strchr(a, b));
-    // printf("> Founded symbol: %c\n", *my_strchr(a, b));
     return 0;
 }
 
