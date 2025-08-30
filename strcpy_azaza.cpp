@@ -3,7 +3,7 @@
 
 #define MAX_SIZE 1000000
 
-char* my_strcpy(char* a, char b[]);
+char* my_strcpy(char a[], char b[]);
 
 int main()
 {
