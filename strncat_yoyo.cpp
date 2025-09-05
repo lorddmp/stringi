@@ -3,7 +3,7 @@
 
 #define MAX_SIZE 1000000
 
-char* my_strncpy(char a[], char b[], int n);
+char* my_strncat(char a[], char b[], int n);
 
 int main()
 {
@@ -12,26 +12,24 @@ int main()
     
     printf("Vvedi stroku 1: ");
     scanf("%[^\n]", a);
-    getchar();
-
+    
     printf("Vvedi stroku 2: ");
     scanf("%[^\n]", b);
 
-
     printf("Vvedi, scolco simvolov hochesh kopirovat: ");
     scanf("%d", &n);
-    
-    my_strncpy(a, b, n);
+
+    my_strncat(a, b, n);
     
     printf("%s", a);
 
     return 0;
 }
 
-char* my_strncpy(char a[], char b[], int n)
+char* my_strncat(char a[], char b[], int n)
 {
-    for (int i = 0; i < strlen(a) && i < n; i++) 
-        a[i] = b[i];
-        
-    return(a);
+    for (int i = 0; i < strlen(b) && i < n; i++)
+        a[strlen(a)] = b[i];
+
+    return (a);
 }

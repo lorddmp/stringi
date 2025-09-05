@@ -17,7 +17,7 @@ int main()
     printf("Enter number of symbol: ");
     scanf("%c", &b);
 
-    printf("%p\n", my_strchr(a, b));
+    printf("Adress of this symbol in given string: %p\n", my_strchr(a, b));
     return 0;
 }
 

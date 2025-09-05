@@ -14,7 +14,7 @@ int main()
 
 bool my_is_alpha(char a)
 {
-    if ('A' <= a && a <= 'z')
+    if (('A' <= a && a <= 'Z') || ('a' <= a && a <= 'z'))
         return true;
     else
         return false;

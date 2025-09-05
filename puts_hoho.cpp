@@ -6,9 +6,11 @@ int main()
 {
     char a[1000000];
     scanf("%[^\n]", &a);
+    
     my_puts(a);
     my_puts(a);
     my_puts(a);
+    
     return 0;
 
 }
