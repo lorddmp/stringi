@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 
-int my_atoi(char* s);
+int my_atoi(const char* s);
 
 int main()
 {
@@ -14,16 +14,20 @@ int main()
     return 0;
 }
 
-int my_atoi(char* s)
+int my_atoi(const char* s)
 {
     int len = strlen(s), sum = 0;
     
     for(int i = 0; i < len; i++)
     {
-        if (!(48 <= s[len - i - 1] && s[len - i - 1] <= 57))
-            return 0;
+        if (!('0' <= s[i] && s[i] <= '9'))
+            return -5;
         
-        sum += (s[len - i - 1] - 48) * pow(10, i);
+        sum += s[i] - '0';
+        if (i == len - 1)
+            break;
+            
+        sum *= 10;
     }
     
     return(sum);

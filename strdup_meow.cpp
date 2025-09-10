@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <assert.h>
 
 char* my_strdup(const char* a);
 
@@ -17,7 +18,12 @@ int main()
 char* my_strdup(const char* a)
 {
     int len = strlen(a);
-    char* adr_a = (char*)malloc(len*sizeof(char));
+    char* adr_a = (char*)malloc(len*sizeof(char)); 
+    if (adr_a == NULL)
+        {
+            printf("Oops, memory is over haha\n");
+            return NULL;          
+        }
 
     for(int i = 0; i < len; i++)
         *(adr_a + i) = a[i];
